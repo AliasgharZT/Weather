@@ -1,0 +1,179 @@
+
+<Style>:
+    MDScreenManager:
+        id:mn 
+#---------MAIN---------
+        MDScreen:
+            name:'main'
+            MDScreen:
+                name:'background'
+                Image: 
+                    source:'background.jpg'
+                    allow_stretch:True
+                    keep_ratio:False 
+            MDScreen:
+                name:'app'
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding:3
+                    scpping:2
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        size_hint_x:1
+                        size_hint_y:(root.height)/7
+                        MDGridLayout:
+                            cols:2
+                            MDRectangleFlatIconButton:
+                                text:' Search '
+                                icon:'weather-cloudy'
+                                text_color:'green'
+                                icon_color:'black'
+                                md_bg_color:'gray'
+                                on_press:root.search() 
+                            MDTextField:
+                                id:sn 
+                                mode:'round' 
+                        MDLabel:
+                            id:nn
+                            text:'Location : '
+                            halign:'center'
+                            color:'black' 
+                            md_bg_color:'gray'
+                    Image:
+                        id:im 
+                        source:'' 
+                        allow_stretch:True
+                        keep_ratio:False 
+                        size_hint_x:1
+                        size_hint_y:((root.height)/7)*2
+                    MDGridLayout:
+                        cols:5
+                        size_hint_x:1
+                        size_hint_y:((root.height)/7)*2
+                        MDLabel:
+                            id:st 
+                            text:'Status:'
+                            color:'black'
+                        MDLabel:
+                            id:ht 
+                            text:'HTemperature:'
+                            color:'black'
+                        MDLabel:
+                            id:lt 
+                            text:'LTemperature:'
+                            color:'black'
+                        MDLabel:
+                            id:mo 
+                            text:'Moisture:'
+                            color:'black' 
+                        MDLabel:
+                            id:ws 
+                            text:'WindSpeed:'
+                            color:'black'
+                    MDGridLayout:
+                        cols:5
+                        size_hint_x:1
+                        size_hint_y:(root.height)/7
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'now'
+                                color:'black'
+                            MDIconButton:
+                                id:n0
+                                icon:'' 
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'+1hour'
+                                color:'black'
+                            MDIconButton:
+                                id:n1 
+                                icon:'' 
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'+2hour'
+                                color:'black'
+                            MDIconButton:
+                                id:n2
+                                icon:'' 
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'+3hour'
+                                color:'black'
+                            MDIconButton:
+                                id:n3
+                                icon:'' 
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'+4hour'
+                                color:'black'
+                            MDIconButton:
+                                id:n4 
+                                icon:'' 
+                    MDGridLayout:
+                        cols:7
+                        size_hint_x:1
+                        size_hint_y:(root.height)/7
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'+1day'
+                                color:'black'
+                            MDIconButton:
+                                id:d1
+                                icon:'' 
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'+2day'
+                                color:'black'
+                            MDIconButton:
+                                id:d2
+                                icon:''
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'+3day'
+                                color:'black'
+                            MDIconButton:
+                                id:d3
+                                icon:''
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'+4day'
+                                color:'black'
+                            MDIconButton:
+                                id:d4
+                                icon:''
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'+5day'
+                                color:'black'
+                            MDIconButton:
+                                id:d5
+                                icon:''
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'+6day'
+                                color:'black'
+                            MDIconButton:
+                                id:d6
+                                icon:''   
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            MDLabel:
+                                text:'+7day'
+                                color:'black'
+                            MDIconButton:
+                                id:d7
+                                icon:'' 
+#-------FAKE---------    
+        MDScreen:
+            name:'fake' 
